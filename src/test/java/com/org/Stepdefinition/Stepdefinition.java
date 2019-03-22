@@ -14,6 +14,7 @@ import org.openqa.selenium.remote.server.handler.GetElementAttribute;
 
 import com.maven.pom.BookHotel;
 import com.maven.pom.LoginPage;
+import com.maven.pom.PageObjectManager;
 import com.maven.pom.SearchHotel;
 import com.maven.pom.SelectHotel;
 import com.org.BaseClass.BaseClass;
@@ -26,28 +27,33 @@ import junit.framework.Assert;
 
 public class Stepdefinition extends BaseClass{
 	static WebDriver driver;
+	LoginPage lp;
+	SelectHotel shl;
+	BookHotel bh;
+	SearchHotel sh;
+	PageObjectManager pageObjectManager;
+	
+	
 
 @Given("^User launch the browser$")
 public void user_launch_the_browser() throws Throwable {
-	LoginPage lp = new LoginPage(driver);
 	driver = getDriver("chrome");
 }
 @When
 ("^Navigate to application$")
 public void navigate_to_application() throws Throwable {
-	LoginPage lp = new LoginPage(driver);
 	getUrl("http://adactin.com/HotelAppBuild2");	
 }
 
 @Given("^User enter the valid username \"([^\"]*)\"$")
 public void user_enter_the_valid_username(String arg1) throws Throwable {
-	LoginPage lp = new LoginPage(driver);
+
 	inputText(lp.getLoginUser(),arg1);
 }
 
 @When("^User enter the valid password \"([^\"]*)\"$")
 public void user_enter_the_valid_password(String arg1) throws Throwable {
-	LoginPage lp = new LoginPage(driver);
+
 	inputText(lp.getPassword(),arg1);
 }
 
@@ -298,7 +304,7 @@ Thread.sleep(2000);
 @Then("^User TestCaseNine verify for the correct \"([^\"]*)\" Sucessfully completed with valid testdata\\.$")
 public void user_TestCaseNine_verify_for_the_correct_Sucessfully_completed_with_valid_testdata(String arg1) throws Throwable {
 	BookHotel bh = new BookHotel(driver);
-System.out.println(arg1 + " pass");
+	System.out.println(arg1 + " pass");
 }
 
 @Given("^User TestCaseTen verify for the correct \"([^\"]*)\" total price$")

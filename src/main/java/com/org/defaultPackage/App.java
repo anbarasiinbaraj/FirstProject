@@ -1,4 +1,4 @@
-package com.org.CucumberFirstday;
+package com.org.defaultPackage;
 
 /**
  * Hello world!

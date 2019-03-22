@@ -1,0 +1,139 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 19,
+        "name": "Verify the user login the application with valid credentials.",
+        "description": "",
+        "id": "login-functionality-module-of-automation-practise-webpage;verify-the-user-login-the-application-with-valid-credentials.;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 7104502686,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "Navigate to application",
+            "match": {
+              "location": "Stepdefinition.navigate_to_application()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1283120502,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "User enter the valid username \"Anbarasi\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Anbarasi",
+                  "offset": 31
+                }
+              ],
+              "location": "Stepdefinition.user_enter_the_valid_username(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 373012341,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "User enter the valid password \"83YR4E\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "83YR4E",
+                  "offset": 31
+                }
+              ],
+              "location": "Stepdefinition.user_enter_the_valid_password(String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1687819691,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "User click the signin button",
+            "match": {
+              "location": "Stepdefinition.user_click_the_signin_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 649469833,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "User validate the username \"Hello Anbarasi!\" displayed in the header",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Hello Anbarasi!",
+                  "offset": 28
+                }
+              ],
+              "location": "Stepdefinition.user_validate_the_username_displayed_in_the_header(String)"
+            },
+            "matchedColumns": [
+              2
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 678329965,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "User close the browser",
+            "match": {
+              "location": "Stepdefinition.user_close_the_browser()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 977405392,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "User Quit Browser",
+            "match": {
+              "location": "Stepdefinition.user_Quit_Browser()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "line": 8,
+            "name": "@Sce1"
+          }
+        ]
+      }
+    ],
+    "name": "Login Functionality module of automation practise Webpage",
+    "description": "Contains E2E functionality such as login, add a product to cart, Place Order and SignOut.",
+    "id": "login-functionality-module-of-automation-practise-webpage",
+    "keyword": "Feature",
+    "uri": "Login.feature"
+  }
+]
